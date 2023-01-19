@@ -27,7 +27,7 @@ public class ProductRouter {
     Logger log = LoggerFactory.getLogger("QueryRouter");
 
     @Bean
-    @RouterOperation(operation = @Operation(operationId = "getAllProduct", summary = "Get all products", tags = "Product",
+    @RouterOperation(operation = @Operation(operationId = "getAllProducts", summary = "Get all products", tags = "Product",
             responses = {@ApiResponse(responseCode = "200", description = "Successful", content = {
                     @Content(mediaType = "application/json", schema = @Schema(implementation = Product.class))
             })}
@@ -41,7 +41,7 @@ public class ProductRouter {
     }
 
     @Bean
-    @RouterOperation(operation = @Operation(operationId = "Get product", summary = "Get product", tags = "Product",
+    @RouterOperation(operation = @Operation(operationId = "getProduct", summary = "Get product", tags = "Product",
             parameters = {
                     @Parameter(in = ParameterIn.PATH, name = "id",
                             description = "Product id",
@@ -61,7 +61,7 @@ public class ProductRouter {
     }
 
     @Bean
-    @RouterOperation(operation = @Operation(operationId = "Create product", summary = "Create product", tags = "Product",
+    @RouterOperation(operation = @Operation(operationId = "createProduct", summary = "Create product", tags = "Product",
             responses = {@ApiResponse(responseCode = "201", description = "Created", content = {
                     @Content(mediaType = "application/json", schema = @Schema(implementation = Product.class))
             })},
@@ -81,7 +81,7 @@ public class ProductRouter {
     }
 
     @Bean
-    @RouterOperation(operation = @Operation(operationId = "Update product", summary = "Update product", tags = "Product",
+    @RouterOperation(operation = @Operation(operationId = "UpdateProduct", summary = "Update product", tags = "Product",
             responses = {@ApiResponse(responseCode = "200", description = "Updated", content = {
                     @Content(mediaType = "application/json", schema = @Schema(implementation = Product.class))
             })},
@@ -105,7 +105,7 @@ public class ProductRouter {
     }
 
     @Bean
-    @RouterOperation(operation = @Operation(operationId = "Delete product", summary = "Delete product", tags = "Product",
+    @RouterOperation(operation = @Operation(operationId = "deleteProduct", summary = "Delete product", tags = "Product",
             responses = {@ApiResponse(responseCode = "200", description = "deleted", content = {
                     @Content(mediaType = "application/json", schema = @Schema(implementation = Product.class))
             })},
@@ -121,3 +121,4 @@ public class ProductRouter {
         );
     }
 }
+
